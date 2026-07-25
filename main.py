@@ -61,11 +61,12 @@ def balance_brackets(brackets_string):
 
 def main():
 
-    test = ["(((([{}]))))", "[([])((([[[]]])))]{()}", "{{[()]}}", "}{}", "{{[(])]}}", "[[{())}]", "{([db])}"]
+    test = input("Введите строку со скобками: ")
 
-    for test_string in test:
-        result = "Сбалансированно" if balance_brackets(test_string) else "Несбалансированно"
-        print(f"Строка: {test_string:30} -> {result}")
+    if balance_brackets(test):
+        print("Сбалансированно")
+    else:
+        print("Несбалансированно")
 
 
 if __name__ == "__main__":
